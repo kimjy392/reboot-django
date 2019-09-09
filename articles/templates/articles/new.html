@@ -1,0 +1,11 @@
+{% extends 'articles/base.html' %}
+
+{% block body %}
+  <form action="/articles/create/" method="GET">
+    <label for="title">title : </label>
+    <input type="text" id="title" name="title"><br>
+    <label for="content">content</label>
+    <textarea name="content" id="contetn"></textarea>
+    <input type="submit" value="제출쓰">
+  </form>
+{% endblock %}

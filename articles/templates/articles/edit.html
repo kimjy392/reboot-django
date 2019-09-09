@@ -1,0 +1,11 @@
+{% extends 'articles/base.html' %}
+
+{% block body %}
+    <form action="/articles/{{ article.pk }}/update/" method="GET">
+    <label for="title">title : </label>
+    <input type="text" id="title" name="title" value="{{ article.title }}"><br>
+    <label for="content">content</label>
+    <textarea name="content" id="contetn">{{ article.content }}</textarea>
+    <input type="submit" value="제출쓰">
+  </form>
+{% endblock %}
