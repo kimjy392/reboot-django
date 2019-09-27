@@ -1,6 +1,5 @@
 from django.shortcuts import render,redirect
 from .models import Article
-
 # Create your views here.
 def index(request):
     articles = Article.objects.all()
@@ -14,8 +13,9 @@ def new(request):
 
 def create(request):
     article = Article()
-    article.title = request.GET.get('title')
-    article.content = request.GET.get('content')
+    article.title = request.POST.get('title')
+    article.content = request.POST.get('content')
+    article.image = request.FILES.get('image')
     article.save()
     return redirect('/articles/')
 

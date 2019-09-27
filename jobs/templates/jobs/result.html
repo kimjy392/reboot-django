@@ -1,0 +1,7 @@
+{% extends 'jobs/base.html' %}
+
+{% block body %}
+  <h1> {{ job.name }}님은 전생에 {{ job.job }}이었습니다. </h1>
+  <a href="{% url 'jobs:create' %}">돌아가기</a>
+  <img src="{{ image_url }}" alt="{{ job.job }}">
+{% endblock %}

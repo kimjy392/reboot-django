@@ -3,6 +3,7 @@
 {% block body %}
   <h2>title : {{ article.title }}</h2>
   <h2>content : {{ article.content }}</h2>
+  <img src="{{ article.image.url }}" alt="bg">
   <h3>update : {{ article.updated_at}}</h3>
   <h3>create : {{ article.created_at }}</h3>
   <a href="/articles/">목록보기</a>
