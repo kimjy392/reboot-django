@@ -15,10 +15,7 @@ def create(request):
     article = Article()
     article.title = request.POST.get('title')
     article.content = request.POST.get('content')
-<<<<<<< HEAD
     article.image = request.FILES.get('image')
-=======
->>>>>>> 57faa98bd23850a43708c505cb982eb2acc6d692
     article.save()
     return redirect('/articles/')
 
